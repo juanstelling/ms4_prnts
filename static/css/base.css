@@ -11,6 +11,10 @@ body {
     font-family: 'Oswald';
 }
 
+p {
+    margin: 0;
+}
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -19,27 +23,29 @@ ul {
     margin-bottom: 0px;
 }
 
+.nav-link {
+    padding: 5px 3px;
+}
+
+.icons {
+    font-size: 15px;
+}
+
+
 /*------------------------------------- background colours */ 
 
 .bg-black {
     background-color: #000 !important;
 }
 
+.bg-grey {
+    background-color: #1A1A1A;
+}
+
 /*------------------------------------- Text colours */ 
 .text-black {
     color: #000 !important;
 }
-
-/*------------------------------------- Header */ 
-
-.nav-link {
-    padding: 5px 3px;
-}
-
-.top-nav-icons {
-    font-size: 15px;
-}
-
 
 /*------------------------------------- Searchbar */ 
 .searchbar {
@@ -54,8 +60,6 @@ ul {
     background-color: #fff;
 
 }
-
-/* -------------------------------- Hamburger menu collapse down */
 
 
 /* -------------------------------- Media Queries */
@@ -89,10 +93,9 @@ ul {
        font-size: 20px;
     }
     .searchbar {
-        width: 50px;
-        
+        width: 50px;   
     }
-    .top-nav-icons {
+    .icons {
         font-size: 10px;
 
     }
