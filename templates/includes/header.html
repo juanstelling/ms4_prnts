@@ -1,11 +1,5 @@
 {% load static %}
 
-<!-- Delivery banner -->
-<div id="delivery-banner" class="row text-center">
-    <div class="col-12 bg-black text-white">
-        <h4 class="uppercase my-1">Free delivery over ${{ free_delivery_threshold }}!</h4>
-    </div>
-</div>
 <!-- Icons -->
 <div class="row my-auto d-none d-lg-flex">
     <div class="col-12 my-1 text-end">
@@ -27,17 +21,17 @@
                     </div>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="user-account">
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item">Management</a>
-                                {% endif %}
-                                <a href="" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
-                        </div>
+                    {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                            <a href="" class="dropdown-item">Management</a>
+                        {% endif %}
+                        <a href="" class="dropdown-item">My Profile</a>
+                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    {% else %}
+                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    {% endif %}
+                </div>
             </li>
             <!-- Shopping bag -->
             <li class="list-inline-item">
@@ -65,38 +59,40 @@
 <div class="row">
     <nav class="navbar navbar-expand-lg navbar-light w-100">
         <div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav mx-auto">
-        <!-- All prints -->
-        <li class="nav-item dropdown">
-            <a class="uppercase nav-link text-black" href="#" id="prints-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <h4>prints</h4>
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="prints-link">
-                <a href="" class="dropdown-item">New</a>
-                <a href="" class="dropdown-item ">Black and white</a>
-                <a href="" class="dropdown-item ">Landscape</a>
-                <a href="" class="dropdown-item">Paint</a>
-                <a href="" class="dropdown-item">Streetart</a>
-            </div>
-        </li>
-        <!-- About -->
-        <li class="nav-item dropdown">
-            <a class="uppercase nav-link text-black" href="#" id="about-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <h4>About</h4>
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="about-link">
-                <a href="" class="dropdown-item">The company</a>
-                <a href="" class="dropdown-item">Sustainability</a>
-            </div>
-        </li>
-        <!-- Lookbook -->
-        <li class="nav-item">
-            <a class="uppercase nav-link text-black" href="#">
-                <h4>Lookbook</h4>
-            </a>
-        </li>
-    </ul>
-</div>
+            <ul class="navbar-nav mx-auto">
+                <!-- All prints -->
+                <li class="nav-item dropdown">
+                    <a class="uppercase nav-link text-black" href="#" id="prints-link" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <h4>prints</h4>
+                    </a>
+                    <div class="dropdown-menu border-0" aria-labelledby="prints-link">
+                        <a href="" class="dropdown-item">New</a>
+                        <a href="" class="dropdown-item ">Black and white</a>
+                        <a href="" class="dropdown-item ">Landscape</a>
+                        <a href="" class="dropdown-item">Paint</a>
+                        <a href="" class="dropdown-item">Streetart</a>
+                    </div>
+                </li>
+                <!-- About -->
+                <li class="nav-item dropdown">
+                    <a class="uppercase nav-link text-black" href="#" id="about-link" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <h4>About</h4>
+                    </a>
+                    <div class="dropdown-menu border-0" aria-labelledby="about-link">
+                        <a href="" class="dropdown-item">The company</a>
+                        <a href="" class="dropdown-item">Sustainability</a>
+                    </div>
+                </li>
+                <!-- Lookbook -->
+                <li class="nav-item">
+                    <a class="uppercase nav-link text-black" href="#">
+                        <h4>Lookbook</h4>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </div>
 

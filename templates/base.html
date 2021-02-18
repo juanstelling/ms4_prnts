@@ -8,30 +8,9 @@
   </head>
   <body>
       <header class="container-fluid fixed-top">
-        {% include 'includes/header.html' %}
-        <!-- Top nav -->
-        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-
-            <!-- Logo -->
-            <div class="col-lg-12 my-auto py-lg-1">
-                <a href="{% url 'home' %}" class="nav-link text-center">
-                    <h1 class="uppercase text-black py-0 display-4">prnts.</h1>
-                </a>   
-            </div> 
-            
-
-        </div>
-        <!-- second nav -->
-        <div class="row">
-              <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                {% include 'includes/main-nav.html' %}
-                {% include 'includes/mobile-top-header.html' %}
-                
-            </nav>
-        </div>               
+        {% include 'includes/free-delivery.html' %}
+        {% include 'includes/mobile-top-header.html' %}  
+        {% include 'includes/header.html' %}                 
       </header>
 
       {% if messages %}
@@ -43,6 +22,11 @@
 
       {% block content %}
       {% endblock %}
+
+      <!-- Footer -->
+      <footer>
+          {% include 'includes/footer.html' %}
+      </footer>
 
       {% block postloadjs %}
       {% endblock %}
