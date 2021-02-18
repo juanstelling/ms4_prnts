@@ -11,6 +11,14 @@ body {
     font-family: 'Oswald';
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
+ul {
+    margin-bottom: 0px;
+}
+
 /*------------------------------------- background colours */ 
 
 .bg-black {
@@ -22,23 +30,29 @@ body {
     color: #000 !important;
 }
 
-/*------------------------------------- Icons */ 
+/*------------------------------------- Header */ 
 
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
+.nav-link {
+    padding: 5px 3px;
+}
+
+.top-nav-icons {
+    font-size: 15px;
 }
 
 
+/*------------------------------------- Searchbar */ 
+.searchbar {
+    font-size: 15px;
+    border: 0px;
+    border-bottom: 1px solid black;
 
+}
 
+.searchbutton {
+    border: 0px;
+    background-color: #fff;
 
-.uppercase {
-    text-transform: uppercase;
 }
 
 .shop-now-button {
@@ -62,11 +76,6 @@ body {
     color: white;
 }
 
-
-
-.border-black {
-    border: 1px solid black !important;
-}
 
 /* -------------------------------- Media Queries */
 
