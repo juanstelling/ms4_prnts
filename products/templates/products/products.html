@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}| PRODUCTS {% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col">
+            {{ products }}
+        </div>
+    </div>
+    
+    <!-- Unique selling points -->
+    {% include 'home/includes/usp.html' %}
+
+    <!-- Newsletter -->
+    {% include 'home/includes/newsletter.html' %}
+{% endblock %}
