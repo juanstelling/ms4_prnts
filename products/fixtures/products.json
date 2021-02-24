@@ -1,0 +1,32 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "AB123456",
+            "name": "Girl in desert",
+            "description": "The girl in the desert was photographed by Pieter Stelling and the picture was taken in Namibia. It relfects the tranquility of the desert and at the same time the inner peace of the man. The girl is meditating with her toughts blowing with the wind.",
+            "price": 19.95,
+            "category": 2,
+            "image": "",
+            "image_url": "",
+            "in_stock": "True",
+            "in_favorite": "False"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "AB123457",
+            "name": "Abstract no. 092",
+            "description": "",
+            "price": 23.95,
+            "category": 4,
+            "image": "",
+            "image_url": "",
+            "in_stock": "True",
+            "in_favorite": "False"
+        }
+    }
+]
