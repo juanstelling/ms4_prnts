@@ -1,8 +1,8 @@
 <div class="row">
     <!-- navigation to categories -->
     <div class="col">
-        <h5 class="uppercase">Categories</h5>
-        <ul class="list-unstyled">
+        <h5 class="uppercase text-end">Categories</h5>
+        <ul class="list-unstyled text-end">
             <li>
                 <a class="text-black text-decoration-none" href="{% url 'products' %}">All Prints</a>
             </li>
@@ -28,22 +28,22 @@
     <div class="col-10 ">
         <div class="row">
             {% for product in products %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                     <div class="card border-0">
                         {% if product.image %}
                             <!-- Image of product -->
-                            <a href="">
+                            <a href="{% url 'product_detail' product.id %}">
                                 <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
                             </a>
                         {% else %}
                             <!-- default error image -->
-                            <a href="">
+                            <a href="{% url 'product_detail' product.id %}">
                                 <img src="..." class="card-img-top" alt="...">
                             </a>
                         {% endif %}
                         <div class="card-body">
-                            <p class="card-title">{{ product.name }}.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="text-black">{{ product.name }}</h5>
+                            <p class="text-black">${{ product.price }}</p>
                         </div>
                     </div>
                 </div>

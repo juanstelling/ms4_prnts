@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}| PRODUCTS {% endblock %}
+
+{% block content %}
+    <!-- Product details  -->
+    {% include 'products/includes/productdetails.html' %}
+    
+    <!-- Unique selling points -->
+    {% include 'home/includes/usp.html' %}
+
+    <!-- Newsletter -->
+    {% include 'home/includes/newsletter.html' %}
+{% endblock %}

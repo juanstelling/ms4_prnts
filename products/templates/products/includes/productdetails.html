@@ -1,0 +1,29 @@
+<!-- Title of print -->
+<div class="row py-4">
+    <div class="col">
+        <h1 class="text-black text-center fw-bold">{{ product.name }}</h1>
+    </div>
+</div>
+<div class="row pb-4 px-5">
+    <!-- Image -->
+    <div class="col-12 col-md-6 col-lg-6">
+        {% if product.image %}
+            <!-- Image of product -->
+                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+        {% else %}
+            <!-- default error image -->
+                <img src="..." class="card-img-top" alt="...">
+        {% endif %}
+    </div>
+    <!-- Product details -->
+    <div class="col-12 col-md-6 col-lg-6">
+        <h5 class="uppercase">{{ product.category }}</h5>
+        <h5>{{ product.in_stock }} | Delivery in 5 business days </h5>
+        <h5>Put in favorites </h5>
+        <h3 class="py-4">${{ product.price }}</h3>
+    </div>
+</div>
+<div class="row pb-4 px-5">
+    <h6 class="text-black uppercase">Product description </h6>
+    <p>{{ product.description }}</p>
+</div>
