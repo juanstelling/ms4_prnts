@@ -33,7 +33,7 @@
                         {% if product.image %}
                             <!-- Image of product -->
                             <a href="">
-                                <img src="..." class="card-img-top" alt="...">
+                                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
                             </a>
                         {% else %}
                             <!-- default error image -->
