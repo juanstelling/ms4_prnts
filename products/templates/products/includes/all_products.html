@@ -1,0 +1,53 @@
+<div class="row">
+    <!-- navigation to categories -->
+    <div class="col">
+        <h5 class="uppercase">Categories</h5>
+        <ul class="list-unstyled">
+            <li>
+                <a class="text-black text-decoration-none" href="{% url 'products' %}">All Prints</a>
+            </li>
+            <li>
+                <a class="text-black text-decoration-none" href="">New</a>
+            </li>
+            <li>
+                <a class="text-black text-decoration-none" href="">Black and White</a>
+            </li>
+            <li>
+                <a class="text-black text-decoration-none" href="">Landscape</a>
+            </li>
+            <li>
+                <a class="text-black text-decoration-none" href="">Paint</a>
+            </li>
+            <li>
+                <a class="text-black text-decoration-none" href="">Streetart</a>
+            </li>
+        </ul>
+        
+    </div>
+    <!-- all products -->
+    <div class="col-10 ">
+        <div class="row">
+            {% for product in products %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card border-0">
+                        {% if product.image %}
+                            <!-- Image of product -->
+                            <a href="">
+                                <img src="..." class="card-img-top" alt="...">
+                            </a>
+                        {% else %}
+                            <!-- default error image -->
+                            <a href="">
+                                <img src="..." class="card-img-top" alt="...">
+                            </a>
+                        {% endif %}
+                        <div class="card-body">
+                            <p class="card-title">{{ product.name }}.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

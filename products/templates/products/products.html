@@ -3,11 +3,8 @@
 {% block extra_title %}| PRODUCTS {% endblock %}
 
 {% block content %}
-    <div class="row">
-        <div class="col">
-            {{ products }}
-        </div>
-    </div>
+    <!-- All products -->
+    {% include 'products/includes/all_products.html' %}
     
     <!-- Unique selling points -->
     {% include 'home/includes/usp.html' %}
