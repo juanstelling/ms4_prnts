@@ -4,7 +4,7 @@
         <ul class="list-inline list-unstyled">
             <!-- Search functionality -->
             <li class="list-inline-item">  
-                <form method="GET" action="">
+                <form method="GET" action="{% url 'products' %}">
                     <input class="searchbar" type="text" name="q" placeholder="Search">
                     <button class="searchbutton">
                         <i class="fas fa-search"></i>
@@ -66,7 +66,6 @@
                     </a>
                     <ul class="dropdown-menu border-0" aria-labelledby="prints-link">
                         <li><a class="dropdown-item" href="{% url 'products' %}">All Prints</a></li>
-                        <li><a class="dropdown-item" href="#">New</a></li>
                         <li><a class="dropdown-item" href="#">Black and White</a></li>
                         <li><a class="dropdown-item" href="#">Landscape</a></li>
                         <li><a class="dropdown-item" href="#">Paint</a></li>
