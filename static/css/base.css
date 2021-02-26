@@ -55,6 +55,10 @@ ul {
     padding-bottom: 10px;
 }
 
+.products-col {
+    padding-right: 3rem !important;
+}
+
 
 /*------------------------------------- background colours */ 
 
@@ -195,5 +199,16 @@ ul {
     .carousel-img {
         height: 300px;
     }
+    .products-col {
+        padding-right: calc(var(--bs-gutter-x)/ 2) !important;
+    }
 
+}
+
+
+/*------------------------------------- Media queries | iPad   */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .products-col {
+        padding-right: calc(var(--bs-gutter-x)/ 2) !important;
+    }
 }

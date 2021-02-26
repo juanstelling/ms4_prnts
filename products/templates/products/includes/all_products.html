@@ -1,27 +1,20 @@
-<!-- TEST -->
-<div class="row">
-    <div class="col">
-        <a href="{% url 'products' %}?sort=price&direction=asc">TESTING</a>
-    </div>
-</div>
 <!-- Sorting by -->
-        <div class="row pe-5 pb-2">
-            <div class="col">
-                <div class="text-end">
-                    <select id="sort-selector" class="custom-select-sm border" aria-label="Default select example">
-                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sorting by</option>
-                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price | low to high</option>
-                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price | high to low </option>
-                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name | A - Z</option>
-                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name | Z - A</option>
-                    </select>
-                </div>   
-            </div>
-        </div>
-        
-<div class="row">
-    <!-- navigation to categories -->
+<div class="row pe-5 pb-2">
     <div class="col">
+        <div class="text-end">
+            <select id="sort-selector" class="custom-select-sm border" aria-label="Default select example">
+                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sorting by</option>
+                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price | low to high</option>
+                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price | high to low </option>
+                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name | A - Z</option>
+                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name | Z - A</option>
+            </select>
+        </div>   
+    </div>
+</div>  
+<div class="row pb-5">
+    <!-- navigation to categories -->
+    <div class="col d-none d-lg-block">
         <h5 class="uppercase text-end">Categories</h5>
         <ul class="list-unstyled text-end">
             <li>
@@ -40,32 +33,39 @@
                 <a class="text-black text-decoration-none" href="{% url 'products' %}?category=streetart">Streetart</a>
             </li>
         </ul>
-        
     </div>
-    <div class="col-10 "> 
+    {% if products|length > 0 %}
         <!-- all products -->
-        <div class="row pe-5">
-            {% for product in products %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div class="card border-0">
-                        {% if product.image %}
-                            <!-- Image of product -->
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
-                            </a>
-                        {% else %}
-                            <!-- default error image -->
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img src="https://res.cloudinary.com/dmv5hano3/image/upload/v1614331897/media/image_not_available_tbyeou.png" class="card-img-top" alt="...">
-                            </a>
-                        {% endif %}
-                        <div class="card-body">
-                            <h5 class="text-black">{{ product.name }}</h5>
-                            <p class="text-black">${{ product.price }}</p>
+        <div class="col-12 col-lg-10 products-col">
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="card border-0">
+                            {% if product.image %}
+                                <!-- Image of product -->
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                                </a>
+                            {% else %}
+                                <!-- default error image -->
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img src="https://res.cloudinary.com/dmv5hano3/image/upload/v1614331897/media/image_not_available_tbyeou.png" class="card-img-top" alt="...">
+                                </a>
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="text-black">{{ product.name }}</h5>
+                                <p class="text-black">${{ product.price }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
-    </div>
+    {% else %}
+        <div class="col-10">
+            <div class="row pe-5">
+                <h4 class="uppercase">No search results. Try again</h4>
+            </div>
+        </div>     
+    {% endif %}
 </div>
