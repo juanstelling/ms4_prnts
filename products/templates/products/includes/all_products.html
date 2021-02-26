@@ -1,3 +1,24 @@
+<!-- TEST -->
+<div class="row">
+    <div class="col">
+        <a href="{% url 'products' %}?sort=price&direction=asc">TESTING</a>
+    </div>
+</div>
+<!-- Sorting by -->
+        <div class="row pe-5 pb-2">
+            <div class="col">
+                <div class="text-end">
+                    <select id="sort-select" class="custom-select-sm border" aria-label="Default select example">
+                        <option selected {% if current_sorting == 'None_None' %}selected{% endif %}>Sorting by</option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price | low to high</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price | high to low </option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name | A - Z</option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name | Z - A</option>
+                    </select>
+                </div>   
+            </div>
+        </div>
+        
 <div class="row">
     <!-- navigation to categories -->
     <div class="col">
@@ -21,13 +42,8 @@
         </ul>
         
     </div>
-    <!-- all products -->
-    <div class="col-10 ">
-        <div class="row">
-            <div class="col">
-                <h4>sorting by</h4>
-            </div>
-        </div>
+    <div class="col-10 "> 
+        <!-- all products -->
         <div class="row pe-5">
             {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
