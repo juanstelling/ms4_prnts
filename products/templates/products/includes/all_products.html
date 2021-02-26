@@ -7,19 +7,16 @@
                 <a class="text-black text-decoration-none" href="{% url 'products' %}">All Prints</a>
             </li>
             <li>
-                <a class="text-black text-decoration-none" href="">New</a>
+                <a class="text-black text-decoration-none" href="{% url 'products' %}?category=black_and_white">Black and White</a>
             </li>
             <li>
-                <a class="text-black text-decoration-none" href="">Black and White</a>
+                <a class="text-black text-decoration-none" href="{% url 'products' %}?category=landscape">Landscape</a>
             </li>
             <li>
-                <a class="text-black text-decoration-none" href="">Landscape</a>
+                <a class="text-black text-decoration-none" href="{% url 'products' %}?category=paint">Paint</a>
             </li>
             <li>
-                <a class="text-black text-decoration-none" href="">Paint</a>
-            </li>
-            <li>
-                <a class="text-black text-decoration-none" href="">Streetart</a>
+                <a class="text-black text-decoration-none" href="{% url 'products' %}?category=streetart">Streetart</a>
             </li>
         </ul>
         
@@ -27,6 +24,11 @@
     <!-- all products -->
     <div class="col-10 ">
         <div class="row">
+            <div class="col">
+                <h4>sorting by</h4>
+            </div>
+        </div>
+        <div class="row pe-5">
             {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                     <div class="card border-0">
@@ -38,7 +40,7 @@
                         {% else %}
                             <!-- default error image -->
                             <a href="{% url 'product_detail' product.id %}">
-                                <img src="..." class="card-img-top" alt="...">
+                                <img src="https://res.cloudinary.com/dmv5hano3/image/upload/v1614331897/media/image_not_available_tbyeou.png" class="card-img-top" alt="...">
                             </a>
                         {% endif %}
                         <div class="card-body">
