@@ -165,12 +165,14 @@ ul {
 }
 
 
-/* -------------------------------- Scroll up button   */
+/* -------------------------------- Buttons   */
 
 .btt-button {
-    padding-right: calc(var(--bs-gutter-x)/ 2);
-    
+    padding-right: calc(var(--bs-gutter-x)/ 2);  
+}
 
+.custom-btn {
+    background-color: #000;
 }
 
 
