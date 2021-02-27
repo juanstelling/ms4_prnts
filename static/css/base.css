@@ -144,6 +144,26 @@ ul {
 
 }
 
+/* -------------------------------- Paginator  */
+.pagina {
+    text-align: center;
+}
+
+.pagina-number {
+    color: #757575;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.pagina-number:hover {
+    color: #000;
+}
+
+.pagina-current {
+    color: #000;
+
+}
+
 
 
 
