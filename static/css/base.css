@@ -165,6 +165,14 @@ ul {
 }
 
 
+/* -------------------------------- Scroll up button   */
+
+.btt-button {
+    padding-right: calc(var(--bs-gutter-x)/ 2);
+    
+
+}
+
 
 
 /* -------------------------------- Media Queries */

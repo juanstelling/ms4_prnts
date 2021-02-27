@@ -1,6 +1,6 @@
 <!-- Sorting by -->
-<div class="row pe-5 pb-2">
-    <div class="col">
+<div class="row pb-2 ">
+    <div class="col products-col">
         <div class="text-end">
             <select id="sort-selector" class="custom-select-sm border" aria-label="Default select example">
                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sorting by</option>
@@ -12,7 +12,7 @@
         </div>   
     </div>
 </div>  
-<div class="row pb-5">
+<div class="row pb-3">
     <!-- navigation to categories -->
     <div class="col d-none d-lg-block">
         <h5 class="uppercase text-end">Categories</h5>
@@ -70,7 +70,7 @@
     {% endif %}
     <!-- Pagination -->
     <div class="col-12">
-        <div class="row pe-5">
+        <div class="row">
             <div class="pagina pt-4">
                 {% for num in products.paginator.page_range %}
                     {% if products.number == num %}
@@ -80,6 +80,14 @@
                     {% endif %}
                 {% endfor %}
             </div>
+            <!-- mobile/ipad back to top button -->
+            <div class="btt-button text-end d-block d-lg-none">
+                <a class="btt-link text-black">
+                    <h6>Back to top <i class="fas fa-arrow-up"></i></h6>
+                    
+                </a>
+            </div>
+
         </div>
     </div>
 </div>
