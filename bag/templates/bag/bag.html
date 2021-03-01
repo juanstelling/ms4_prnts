@@ -11,7 +11,10 @@
 <div class="row">
     <div class="col">
         {% if bag_items %}
-        <div class="rounded"></div>
+        <div class="rounded">
+            {{ bag_items }}
+            
+        </div>
         {% else %}
             <hr>
             <h4 class="text-black uppercase ps-4">Your bag is empty.</h4>
