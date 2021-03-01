@@ -126,6 +126,12 @@ ul {
     height: 450px;
 }
 
+.bag-img {
+    height: 80px;
+    width: 120px;
+
+}
+
 /* -------------------------------- Header  */
 
 .carousel-caption {
