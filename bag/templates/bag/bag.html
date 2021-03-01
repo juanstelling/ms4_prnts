@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}| SHOPPING BAG {% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col pt-4">
+        <h2 class="text-black uppercase text-center" >Shopping bag</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        {% if bag_items %}
+        <div class="rounded"></div>
+        {% else %}
+            <hr>
+            <h4 class="text-black uppercase ps-4">Your bag is empty.</h4>
+            <p class="uppercase ps-4"><a class="text-black" href="{% url 'products' %}">Go back to all prints</a></p>
+        
+            <!-- Unique selling points -->
+            {% include 'home/includes/usp.html' %}
+
+            <!-- Newsletter -->
+            {% include 'home/includes/newsletter.html' %}
+        {% endif %}
+    </div>
+</div>
+    
+{% endblock %}

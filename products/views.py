@@ -14,13 +14,10 @@ def products(request):
     categories = None
     sort = None
     direction = None
+    page = None
     paginator = Paginator(products, 9)
 
     if request.GET:
-        if 'page' in request.GET:
-            page = request.GET.get('page')
-            products = paginator.get_page(page)
-
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
@@ -48,6 +45,10 @@ def products(request):
             queries = Q(name__icontains=query) | Q(
                 description__icontains=query)
             products = products.filter(queries)
+
+        if 'page' in request.GET:
+            page = request.GET.get('page')
+            products = paginator.get_page(page)
 
     current_sorting = f'{sort}_{direction}'
 
