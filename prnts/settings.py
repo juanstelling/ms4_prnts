@@ -79,6 +79,7 @@ TEMPLATES = [
                 # Required by allauth 
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'bag.contexts.bag_contents',
             ],
         },
     },
@@ -169,3 +170,6 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': os.getenv("CLOUDINARY_API_SECRET")
 }
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+FREE_DELIVERY_THRESHOLD = 45
+STANDARD_DELIVERY_PERCENTAGE = 10
