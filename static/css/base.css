@@ -170,6 +170,13 @@ ul {
 
 }
 
+/* -------------------------------- Cursor pointer  */
+
+.update-link, 
+.remove-item {
+    cursor: pointer;
+}
+
 /* -------------------------------- Buttons   */
 
 .btt-button {
@@ -185,8 +192,6 @@ ul {
     color: white !important;
     border: 1px solid black;
 }
-
-
 
 /* -------------------------------- Media Queries */
 
