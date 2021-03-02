@@ -170,6 +170,20 @@ ul {
 
 }
 
+/* -------------------------------- Toast messages  */
+
+.toast-container {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    z-index:  99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+
+}
+
 /* -------------------------------- Cursor pointer  */
 
 .update-link, 

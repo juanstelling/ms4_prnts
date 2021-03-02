@@ -14,16 +14,20 @@
         </header>
 
         {% if messages %}
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col">
-                        <ul class="messages">
-                            {% for message in messages %}
-                            <li class="{{ message.tags }}">{{ message }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
+            <div class="toast-container">
+                {% for message in messages %}
+                    {% with message.level as level %}
+                        {% if level == 40 %}
+                            {% include 'includes/toasts/error_toast.html' %}
+                        {% elif level == 30 %}
+                            {% include 'includes/toasts/warning_toast.html' %}
+                        {% elif level == 25 %}
+                            {% include 'includes/toasts/succes_toast.html' %}
+                        {% else %}
+                            {% include 'includes/toasts/info_toast.html' %}
+                        {% endif %}
+                    {% endwith %}
+                {% endfor %}
             </div>
         {% endif %}
 
@@ -37,6 +41,21 @@
         </footer>
 
         {% block postloadjs %}
+        <script type="text/javascript">
+            var option = 
+            {
+                animation: true,
+                autohide: true,
+                delay: 4000,
+            }
+
+            var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+                var toastList = toastElList.map(function (toastEl) {
+                    return new bootstrap.Toast(toastEl, option)
+                })
+            toastList.forEach(toast => toast.show());
+        
+        </script>
         {% endblock %}
     </body>
 </html>
