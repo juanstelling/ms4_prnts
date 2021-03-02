@@ -1,3 +1,5 @@
+{% load bag_tools %}
+
 <div class="row">
     <div class="col pt-4">
         <h2 class="text-black uppercase text-center" >Shopping bag</h2>
@@ -6,11 +8,11 @@
 <div class="row">
     <div class="col">
         {% if bag_items %}     
-        <div class="table-responsive">
+        <div class="table-responsive pt-3">
             <table class="table text-black">
                 <thead class="uppercase">
                     <tr>
-                        <th scope="col">Products</th>
+                        <th scope="col">Prints</th>
                         <th scope="col">Name</th>
                         <th scope="col">Price</th>
                         <th scope="col">Quantity</th>
@@ -31,7 +33,7 @@
                             <p class="my-0">${{ item.product.price }}</p>     
                         </td>
                         <td>
-                            <form class="form update-form" method="POST" action="">
+                            <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <div class="input-group">
@@ -57,16 +59,18 @@
                                     </div>
                                 </div>
                             </form>
-                            <a class="update-link text-info"><small>Update</small></a>
-                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
+                            <a class="update-link text-black"><p class="text-end">Update</p></a>
                         </td>
                         <td>
-                            <p class="my-0">${{ item.product.price }}</p>   
+                            <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>   
+                        </td>
+                        <td>
+                            <a class="remove-item float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><i class="fas fa-trash-alt text-black"></i></a>
                         </td>
                     </tr>
                     {% endfor %}
                     <tr>
-                        <td colspan="5" class="pt-5 text-right">
+                        <td colspan="5" class="pt-5 text-end">
                             <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
                             <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
