@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}| CHECKOUT {% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!-- Shopping bag -->
+    {% include 'checkout/includes/product_checkout.html' %}
+
+    <!-- Unique selling points -->
+    {% include 'home/includes/usp.html' %}
+
+    <!-- Newsletter -->
+    {% include 'home/includes/newsletter.html' %} 
+{% endblock %}
