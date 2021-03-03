@@ -14,10 +14,10 @@
     <div class="col-12 col-md-6 col-lg-6">
         {% if product.image %}
             <!-- Image of product -->
-                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
         {% else %}
             <!-- default error image -->
-                <img src="https://res.cloudinary.com/dmv5hano3/image/upload/v1614331731/media/no_image_yah5vz.png" class="card-img-top" alt="...">
+            <img src="https://res.cloudinary.com/dmv5hano3/image/upload/v1614331731/media/no_image_yah5vz.png" class="card-img-top" alt="...">
         {% endif %}
     </div>
     <!-- Product details -->
@@ -76,7 +76,8 @@
                 </div>
             </form>
         {% else %}
-            <h6>Sorry, this product is currently out of stock.</h6>
+            <h5>Sorry, this product is currently out of stock.</h5>
+            <p>Contact us and we will let you know when the product is back in stock.</p>
         {% endif %}
     </div>
 </div>
