@@ -59,9 +59,7 @@ ul {
     padding-right: 3rem !important;
 }
 
-
 /*------------------------------------- background colours */ 
-
 .bg-black {
     background-color: #000 !important;
 }
@@ -129,7 +127,6 @@ ul {
 .bag-img {
     height: 80px;
     width: 120px;
-
 }
 
 /* -------------------------------- Header  */
@@ -147,54 +144,23 @@ ul {
     color: #000;
     text-align: left;
     padding: 10px 30px;
-
 }
 
-/* -------------------------------- Paginator  */
-.pagina {
-    text-align: center;
-}
-
-.pagina-number {
-    color: #757575;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.pagina-number:hover {
-    color: #000;
-}
-
-.pagina-current {
-    color: #000;
-
-}
-
-/* -------------------------------- Toast messages  */
-
-.toast-container {
-    position: fixed;
-    top: 100px;
-    right: 10px;
-    z-index:  99999999999;
-}
-
-.custom-toast {
-    overflow: visible;
-
-}
-
-/* -------------------------------- Cursor pointer  */
-
+/* -------------------------------- Buttons / links  */
+.btt-button,
 .update-link, 
 .remove-item {
     cursor: pointer;
 }
 
-/* -------------------------------- Buttons   */
-
 .btt-button {
-    padding-right: calc(var(--bs-gutter-x)/ 2);  
+    padding-right: calc(var(--bs-gutter-x)/ 2); 
+    background-color: #fff;
+    border-radius: 10px;;
+    position: fixed;
+    width: 130px;
+    bottom: 15px;
+    right: 15px;
 }
 
 .custom-btn {
@@ -205,6 +171,18 @@ ul {
     background: black;
     color: white !important;
     border: 1px solid black;
+}
+
+/* -------------------------------- Toast messages  */
+.toast-container {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    z-index:  99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
 }
 
 /* -------------------------------- Media Queries */
@@ -264,7 +242,6 @@ ul {
     }
 
 }
-
 
 /*------------------------------------- Media queries | iPad   */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
