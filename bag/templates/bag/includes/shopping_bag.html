@@ -76,19 +76,26 @@
                     {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-end">
-                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                    <h6 class="fw-bolder">Bag Total: ${{ total }}</h6>
+                                    <h6>Delivery: ${{ delivery }}</h6>
+                                    <h4 class="mt-4 fw-bolder">Grand Total: ${{ grand_total }}</h4>
                                     {% if free_delivery_delta > 0 %}
                                         <p class="mb-1 text-danger">
                                             You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
                                         </p>
                                     {% endif %}
-                                </td>
+                                </td>         
                             </tr>
                         </tbody>
                 </table>
-                <a href="{% url 'checkout' %}">CHECKOUT</a>
+                <div class="col pe-5 pb-5 text-end">
+                    <div class="btn btn-black custom-btn text-end">
+                        <a class="uppercase text-white text-decoration-none" href="{% url 'products' %}"> < Keep shopping</a>
+                    </div>
+                    <div class="btn btn-black custom-btn text-end">
+                        <a class="uppercase text-white text-decoration-none" href="{% url 'checkout' %}">Go to checkout</a>
+                    </div>
+                </div>    
             </div>
         {% else %}
             <hr>

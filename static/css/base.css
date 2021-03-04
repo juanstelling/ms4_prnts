@@ -59,6 +59,11 @@ ul {
     padding-right: 3rem !important;
 }
 
+.custom-col {
+
+    height: 90%;
+}
+
 /*------------------------------------- background colours */ 
 .bg-black {
     background-color: #000 !important;
@@ -66,10 +71,6 @@ ul {
 
 .bg-grey {
     background-color: #1A1A1A;
-}
-
-.bg-green {
-    background-color: green;
 }
 
 .bg-brown {
@@ -165,6 +166,7 @@ ul {
 
 .custom-btn {
     background-color: #000;
+    display: inline-block;
 }
 
 .btn-black {

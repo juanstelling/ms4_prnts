@@ -5,27 +5,52 @@
         <h2 class="text-black uppercase text-center">Checkout</h2>
     </div>
 </div>
-<div class="row">
-    <div class="col">
+<div class="row pt-5 px-4">
+    <!-- Summary of products -->
+    <div class="col-12 col-lg-3 col-lx-3 border custom-col bg-brown">
+        <h5 class="uppercase pt-2">Order summary ({{ product_count }})</h5>
+        <hr>
+        {% for item in bag_items %}
+            <div class="row">
+                <div class="col">
+                    <p class="my-0 uppercase">{{ item.product.name }}</p>
+                    <p class="my-0 small">60 x 40 cm</p>
+                    <p class="my-0 small">Quantity: {{ item.quantity }}</p>
+                </div>
+                <div class="col text-end">
+                    <p class="my-0">${{ item.product.price }}</p>
+                </div>
+            </div>
+        {% endfor %}
+            <div class="row">
+                <div class="col pb-2">
+                    <hr>
+                    <p>Bag Total: ${{ total }}</p>
+                    <p>Delivery: ${{ delivery }}</p>
+                    <p class="fw-bolder uppercase pt-1">Grand Total: ${{ grand_total }}</p>
+                </div>
+            </div>
+    </div>
+    <div class="col-12 col-lg-9 col-lx-9 pt-2">
         <!-- FORM -->
-        <p>Please fill out the form</p>
+        <p class="pb-3 px-3">Login with your account here or place the order as a guest by filling in the form</p>
         <form action="{% url 'checkout' %}" method="POST" id="payment-form">
             {% csrf_token %}
-            <fieldset>
-                <legend>Details</legend>
+            <fieldset class="px-3">
+                <legend class="uppercase">Personal info</legend>
                 {{ order_form.full_name | as_crispy_field }}
                 {{ order_form.email | as_crispy_field }}
                 {{ order_form.phone_number | as_crispy_field }}
             </fieldset>
-            <fieldset>
-                <legend>Delivery</legend>
+            <fieldset class="px-3 pt-3">
+                <legend class="uppercase">Delivery info</legend>
                 {{ order_form.country | as_crispy_field }}
                 {{ order_form.postcode | as_crispy_field }}
                 {{ order_form.town_or_city | as_crispy_field }}
                 {{ order_form.street_address1 | as_crispy_field }}
                 {{ order_form.street_address2 | as_crispy_field }}
             </fieldset>
-            <div class="form-check form-check-inline">
+            <div class="form-check form-check-inline ps-5 pt-3">
                 {% if user.is_authenticated %}
                     <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                     <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
@@ -36,7 +61,7 @@
                     </label>
                 {% endif %}
             </div>
-            <fieldset>
+            <fieldset class="px-3 pt-3">
                 <legend>Payment</legend>
                 <!-- stripe card element will go here -->
                 <div id="card-element"></div>
@@ -67,19 +92,5 @@
         </form>
 
     </div>
-    <!-- Summary of products -->
-    <div class="col">
-        <h4>Order summary {{ product_count }}</h4>
-        {% for item in bag_items %}
-                <div class="row">
-                    <div class="col-3 my-1">
-                        <img class="w-100" src="{{ item.product.image.url }}">
-                    </div>
-                    <div class="col-9">
-                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                        <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
-                    </div>
-                </div>
-            {% endfor %}
-    </div>
+    
 </div>
