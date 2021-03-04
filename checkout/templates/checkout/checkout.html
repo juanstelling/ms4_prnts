@@ -2,10 +2,6 @@
 {% load static %}
 {% block extra_title %}| CHECKOUT {% endblock %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
-{% endblock %}
-
 {% block content %}
     <!-- Shopping bag -->
     {% include 'checkout/includes/product_checkout.html' %}
@@ -15,4 +11,11 @@
 
     <!-- Newsletter -->
     {% include 'home/includes/newsletter.html' %} 
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
