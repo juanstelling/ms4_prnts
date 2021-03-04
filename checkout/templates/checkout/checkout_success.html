@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}| CHECKOUT SUCCES {% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+    <div class="col pt-4">
+        <h2 class="text-black uppercase text-center">Thanks for your purchase!</h2>
+    </div>
+</div>
+<div class="row pt-5 px-4">
+    <!-- Thank you info -->
+    <div class="col-12 text-center pb-5">
+        <h4>We'll email <strong>{{ order.email }} </strong>with the order confirmation with details and tracking info.</h4>
+        <a href="{% url 'products' %}" class="btn btn-black rounded-0">
+            <span class="uppercase fw-bold">Continue shopping</span>
+        </a>
+    </div>  
+</div>
+{% endblock %}
