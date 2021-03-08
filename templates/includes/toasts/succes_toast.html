@@ -10,7 +10,7 @@
                 <hr class="text-black">
             </div>
         </div>
-        {% if grand_total %}
+        {% if grand_total and not on_profile_page %}
             <p class=" text-black py-1">Your Bag ({{ product_count }})</p>
             {% for item in bag_items %}
                 <div class="row">

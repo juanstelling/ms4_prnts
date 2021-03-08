@@ -8,6 +8,10 @@
   background-color: #fff;
 }
 
+#payment-form input::placeholder {
+    color: #6b6b6b;
+}
+
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
@@ -26,9 +30,6 @@ select:invalid,
 select option[value=""] {
     color: #6b6b6b !important;
 }
-
-select
-
 
 .fieldset-label {
     position: relative;

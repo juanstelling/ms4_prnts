@@ -8,7 +8,7 @@ var style = {
         fontFamily: 'Oswald',
         fontSize: '16px',
         '::placeholder': {
-                color: '#000'
+                color: '#6b6b6b '
         }
     },
     invalid: {
