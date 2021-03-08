@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}| MY PROFILE {% endblock %}
+
+{% block content %}
+    <!-- User profile  -->
+    {% include 'profiles/includes/user_profile.html' %}
+
+    <!-- Unique selling points -->
+    {% include 'home/includes/usp.html' %}
+
+    <!-- Newsletter -->
+    {% include 'home/includes/newsletter.html' %} 
+  
+{% endblock %}
+
