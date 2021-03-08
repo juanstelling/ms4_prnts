@@ -218,11 +218,11 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    color: #6b6b6b; 
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: #cfd7df;
     border-radius: 0;
 }
 
@@ -231,7 +231,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: #aab7c4;
+    color: #6b6b6b;
 }
 
 .allauth-form-inner-content button,
@@ -261,11 +261,25 @@ input[name='q']::placeholder {
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
     background-color: #222;
-    border-color: #222;
+    border-color: #cfd7df;
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #000;
+}
+
+.form-control {
+    margin: 10px 0px;
+    border: 1px solid #cfd7df;
+    color: #000;
+}
+
+.form-control:focus {
+    border-color: #CDBB8D;
+}
+
+input:-internal-autofill-selected {
+    background-color: #fff !important;
 }
 
 /*------------------------------------- Media queries | for iPhone 5/6/7/8 plus   */
