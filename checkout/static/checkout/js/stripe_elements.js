@@ -6,7 +6,6 @@ var style = {
     base: {
         color : '#000',
         fontFamily: 'Oswald',
-        fontSmoothing: 'antialiased',
         fontSize: '16px',
         '::placeholder': {
                 color: '#000'
