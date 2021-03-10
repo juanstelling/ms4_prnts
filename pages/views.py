@@ -7,6 +7,12 @@ def company(request):
     return render(request, 'pages/company.html')
 
 
+def lookbook(request):
+    """ A view to return the lookbook page """
+
+    return render(request, 'pages/lookbook.html')
+
+
 def sustainability(request):
     """ A view to return the sustainability page """
 
