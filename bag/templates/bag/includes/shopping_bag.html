@@ -24,7 +24,11 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <img class="bag-img" src="{{ item.product.image.url }}">
+                                    {% if item.product.image %}
+                                        <img class="bag-img" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                    {% else %}
+                                        <img class="bag-img" src="https://res.cloudinary.com/dmv5hano3/image/upload/v1614331897/media/image_not_available_tbyeou.png">
+                                    {% endif %}
                                 </td>
                                 <td>
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>

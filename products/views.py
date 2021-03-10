@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -67,7 +68,17 @@ def product_detail(request, product_id):
 
 def add_product(request):
     """ Add product to the webshop """
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product is succesfully added!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add product.')
+    else:
+        form = ProductForm()
+
     template = 'products/add_product.html'
     context = {
         'form': form,

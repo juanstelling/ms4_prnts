@@ -48,11 +48,11 @@
                 {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
                         <li>
-                            <a class="text-white text-decoration-none" href="{% url 'account_logout' %}">Management</a>
+                            <a class="text-white text-decoration-none" href="{% url 'add_product' %}">Management</a>
                         </li>
                     {% endif %}
                     <li>
-                        <a class="text-white text-decoration-none" href="">My Account</a>
+                        <a class="text-white text-decoration-none" href="{% url 'profile' %}">My Account</a>
                     </li>
                     <li>
                         <a class="text-white text-decoration-none" href="{% url 'account_logout' %}">Logout</a>

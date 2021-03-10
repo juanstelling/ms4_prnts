@@ -17,7 +17,7 @@
             <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
         {% else %}
             <!-- default error image -->
-            <img src="https://res.cloudinary.com/dmv5hano3/image/upload/v1614331731/media/no_image_yah5vz.png" class="card-img-top" alt="...">
+            <img src="https://res.cloudinary.com/dmv5hano3/image/upload/v1614331897/media/image_not_available_tbyeou.png" class="card-img-top" alt="...">
         {% endif %}
     </div>
     <!-- Product details -->
@@ -50,7 +50,7 @@
                                 </div>
                                 <input class="form-control qty_input text-center" type="number" name="quantity" value="1" min="1" max="99"
                                     data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                                <div class="input-groep-append">
+                                <div class="input-group-append">
                                     <button class="increment-qty btn btn-black rounded-0" data-item_id="{{ product.id }}"
                                         id="increment-qty_{{ product.id }}">
                                         <span class="icon">
