@@ -183,6 +183,11 @@ input[name='q']::placeholder {
     border: 1px solid #171717;
 }
 
+.btn-modal {
+    padding: 0;
+    padding-bottom: 3px;
+}
+
 /* -------------------------------- Toast messages  */
 .toast-container {
     position: fixed;
