@@ -48,7 +48,7 @@
                 {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
                         <li>
-                            <a class="text-white text-decoration-none" href="{% url 'add_product' %}">Management</a>
+                            <a class="text-white text-decoration-none" href="{% url 'add_product' %}">Add Product</a>
                         </li>
                     {% endif %}
                     <li>
@@ -62,7 +62,7 @@
                         <a class="text-white text-decoration-none" href="{% url 'account_login' %}">Login</a>
                     </li>
                     <li>
-                        <a class="text-white text-decoration-none" href="{% url 'account_signup' %}">Register</a>
+                        <a class="text-white text-decoration-none" href="{% url 'account_signup' %}">Sign Up</a>
                     </li>
                 {% endif %}
             </ul>

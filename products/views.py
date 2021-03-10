@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
@@ -59,6 +60,7 @@ def product_detail(request, product_id):
     """ A view to show individual product detailpage """
 
     product = get_object_or_404(Product, pk=product_id)
+
 
     context = {
         'product': product,
@@ -124,7 +126,7 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from websjop """
+    """ Delete a product from webshop"""
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, this page is not authorized for you!')
         return redirect(reverse('home'))
@@ -133,3 +135,4 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product is succesfully deleted!')
     return redirect(reverse('products'))
+

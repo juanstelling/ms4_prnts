@@ -3,6 +3,10 @@ from products.models import Product
 from django.core.paginator import Paginator
 
 
+def error_404_view(request, exception):
+    return render(request, '404.html')
+
+
 def index(request):
     """ A view to return the index page """
 
