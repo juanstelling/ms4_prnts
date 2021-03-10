@@ -28,13 +28,6 @@
         {% else %}
             <h5 class="uppercase text-danger">Sold out</h5>
         {% endif %}
-        <div id="fouvourite-section">
-            <h5>
-                <a class="text-black" href=""><i class="far fa-heart"></i></a>
-                
-                Put in favorites 
-            </h5>
-        </div>
         <!-- Editing and deleting product -->
         {% if request.user.is_superuser %}
             <p>
