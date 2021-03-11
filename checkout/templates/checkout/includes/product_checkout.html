@@ -38,7 +38,7 @@
     </div>
     <!-- FORM -->
     <div class="col-12 col-lg-9 col-lx-9 pt-2">
-        <p class="pb-3 px-3">Login with your account here or place the order as a guest by filling in the form</p>
+        <p class="pb-3 px-3"><a class="text-black" href="{% url 'account_login' %}">Login with your account here </a>or place the order as a guest by filling in the form</p>
         <form action="{% url 'checkout' %}" method="POST" id="payment-form">
             {% csrf_token %}
             <fieldset class="px-3">
@@ -59,11 +59,6 @@
                 {% if user.is_authenticated %}
                     <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                     <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
-                {% else %}
-                    <label class="form-check-label" for="id-save-info">
-                        <a href="#">Create an account</a>
-                        <a href="#">Login</a>
-                    </label>
                 {% endif %}
             </div>
             <fieldset class="px-3 pt-3">
