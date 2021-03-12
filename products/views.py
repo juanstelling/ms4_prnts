@@ -7,12 +7,14 @@ from django.db.models.functions import Lower
 
 from .models import Product, Category
 from .forms import ProductForm
+from newsletter.forms import EmailSubscribeForm
 
 
 def products(request):
     """ A view to return the products page """
 
     products = Product.objects.all()
+    form = EmailSubscribeForm()
     query = None
     categories = None
     sort = None
@@ -48,6 +50,7 @@ def products(request):
 
     context = {
         'products': products,
+        'form': form,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,

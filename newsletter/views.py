@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.conf import settings
@@ -40,10 +39,11 @@ def email_list_signup(request):
             email_subscribe_qs = Subscribe.objects.filter(
                 email=form.instance.email)
             if email_subscribe_qs.exists():
-                messages.info(request, "Your are already subscribed!")
+                messages.error(request, "Your are already subscribed!")
             else:
                 subscribe(form.instance.email)
                 form.save()
+                messages.success(request, "Your are succesfully subscribed!")
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 

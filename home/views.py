@@ -2,7 +2,6 @@ from django.shortcuts import render
 from products.models import Product
 from django.core.paginator import Paginator
 
-from newsletter.models import Subscribe
 from newsletter.forms import EmailSubscribeForm
 
 

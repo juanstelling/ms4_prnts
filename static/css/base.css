@@ -71,6 +71,11 @@ ul {
     height: 90%;
 }
 
+input#email {
+    border: 0px;
+    border-bottom: 3px solid black;
+}
+
 /*------------------------------------- background colours */ 
 .bg-black {
     background-color: #000 !important;
@@ -104,23 +109,6 @@ ul {
 
 input[name='q']::placeholder {
     color: #aab7c4;
-}
-
-/*------------------------------------- Newsletter */ 
-.newsletter-bar {
-    width: 30%;
-    font-size: 30px;
-    border: 0px;
-    border-bottom: 3px solid black;
-
-}
-
-.newsletterbutton {
-    width: 30%;
-    margin-top: 5px;
-    padding: 5px;
-    border: 0px;
-    background-color: #000;
 }
 
 /* -------------------------------- Images */
