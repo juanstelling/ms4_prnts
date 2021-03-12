@@ -4,8 +4,16 @@ html {
 }
 
 body {
-    height: calc(100vh - 164px);
+    position: relative;
+    min-height: 100vh;
     font-family: 'Oswald';
+    padding-bottom: 200px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 p {
@@ -217,8 +225,6 @@ input[name='q']::placeholder {
 .accordion-button:focus {
     border: 0px;
 }
-
-
 
 /* -------------------------------- Toast messages  */
 .toast-container {
