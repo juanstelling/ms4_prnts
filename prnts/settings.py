@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'pages',
+    'newsletter',
 
     # Other
     'crispy_forms',
@@ -173,7 +174,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
@@ -195,4 +195,8 @@ STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
 STRIPE_WH_SECRET = os.getenv("STRIPE_WH_SECRET")
 DEFAULT_FROM_EMAIL = 'prnts@example.com'
 
+# Mailchimp
+MAILCHIMP_API_KEY = 'f55aeb8019697c246d5feeba7174bab5-us1'
+MAILCHIMP_DATA_CENTER = 'us1'
+MAILCHIMP_EMAIL_LIST_ID = '623ebe1ab0'
 
