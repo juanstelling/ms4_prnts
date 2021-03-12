@@ -79,6 +79,8 @@ ul {
     height: 90%;
 }
 
+/*------------------------------------- Overig */ 
+
 input#email {
     border: 0px;
     border-bottom: 3px solid black;
@@ -147,7 +149,8 @@ input[name='q']::placeholder {
     width: 120px;
 }
 
-/* -------------------------------- Header  */
+
+/* -------------------------------- caption in images  */
 
 .carousel-caption {
     position: absolute;
@@ -216,7 +219,6 @@ input[name='q']::placeholder {
     padding-bottom: 3px;
 }
 
-/* -------------------------------- FAQ  */
 .accordion-button:not(.collapsed) {
     color: #000;
     background-color: #e0d2ae;

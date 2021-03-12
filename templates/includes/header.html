@@ -74,19 +74,12 @@
                     </ul>
                 </li>
                 <!-- About -->
-                <li class="nav-item dropdown">
-                    <a class="uppercase nav-link text-black " href="#" id="about-link" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <h4>About</h4>
-                    </a>
-                    <ul class="dropdown-menu border-0" aria-labelledby="about-link">
-                        <li><a class="dropdown-item" href="{% url 'company' %}">The company</a></li>
-                        <li><a class="dropdown-item" href="{% url 'sustainability' %}">Sustainability</a></li>
-                    </ul>
-                </li>
-                <!-- Lookbook -->
                 <li class="nav-item">
-                    <a class="nav-link active uppercase text-black" aria-current="page" href="{% url 'lookbook' %}"><h4>Lookbook</h4></a>
+                    <a class="nav-link active uppercase text-black" aria-current="page" href="{% url 'company' %}"><h4>About</h4></a>
+                </li>
+                <!-- Sustainability -->
+                <li class="nav-item">
+                    <a class="nav-link active uppercase text-black" aria-current="page" href="{% url 'sustainability' %}"><h4>Sustainability</h4></a>
                 </li>
             </ul>
         </div>
