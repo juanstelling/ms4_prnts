@@ -5,13 +5,19 @@
 {% endblock %}
 
 <div class="row">
-    <div class="col pt-4">
+    <div class="col pt-4 pb-4">
         <h2 class="text-black uppercase text-center">My Profile</h2>
     </div>   
 </div>
 <div class="row px-5 py-2">
-    <div class="col-12 col-lg-6">
-        <p class="text-black uppercase">Username and email</p>
+    <div class="col-12 col-lg-6 pb-3">
+        <p class="text-black uppercase">Personal info</p>
+        <p>Username: {{ user.username }}</p>
+        <p>Emai: {{ user.email }}</p> 
+        <hr>
+        <p class="text-black uppercase pb-1">Change personal info</p>
+        <a class="btn btn-black rounded-0 uppercase" href="{% url 'account_change_password' %}">Change password</a>
+        <a class="btn btn-black rounded-0 uppercase" href="{% url 'account_email' %}">Manage email</a>
     </div>
     <div class="col-12 col-lg-6">
         <p class="text-black uppercase">Default Delivery Information</p>
