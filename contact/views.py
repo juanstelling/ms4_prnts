@@ -11,7 +11,7 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(
+            messages.info(
                 request, 'Your message is send. '
                 + 'We will reply within 48 hours!')
         return redirect(reverse('contact'))
