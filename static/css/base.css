@@ -86,6 +86,22 @@ input#email {
     border-bottom: 3px solid black;
 }
 
+
+/*------------------------------------- Contact form */
+
+.contact-input {
+    margin: 5px 0px;
+    box-sizing: border-box;
+    padding: 5px 5px;
+    border: 1px solid #cfd7df;
+    border-radius: 0px;
+    background-color: #fff;
+}
+
+.contact-input::placeholder {
+    color: #000;
+}
+
 /*------------------------------------- background colours */ 
 .bg-black {
     background-color: #000 !important;

@@ -1,1 +1,16 @@
-<h1>HOI</h1>
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}| CONTACT US {% endblock %}
+
+{% block content %}
+
+    <!-- Contact section -->
+    {% include 'contact/includes/get-in-contact.html' %}
+    
+    <!-- Unique selling points -->
+    {% include 'includes/usp.html' %}
+
+    <!-- Cta to products -->
+    {% include 'includes/cta-products.html' %}
+    
+{% endblock %}
