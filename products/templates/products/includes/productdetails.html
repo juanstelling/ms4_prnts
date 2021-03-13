@@ -102,7 +102,9 @@
             </form>
         {% else %}
             <h5>Sorry, this product is currently out of stock.</h5>
-            <p>Contact us and we will let you know when the product is back in stock.</p>
+            <p>
+                <a class="text-black" href="{% url 'contact' %}">Contact us</a>
+                and we will let you know when the product is back in stock.</p>
         {% endif %}
     </div>
 </div>

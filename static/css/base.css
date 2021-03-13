@@ -90,6 +90,7 @@ input#email {
 /*------------------------------------- Contact form */
 
 .contact-input {
+    width: 100%;
     margin: 5px 0px;
     box-sizing: border-box;
     padding: 5px 5px;

@@ -6,12 +6,12 @@
 </div>
 <div class="container">
 <div class="row pb-3">
-    <div class="col px-5 pb-4">
+    <div class="col-12 col-lg-6 pb-4">
        <h5 class="uppercase">Prnts.</h5>
        <p><i class="fas fa-phone-alt"></i> +31655595693</p>
        <p><i class="far fa-envelope"></i> prnts.art@test.com</p>
     </div>
-    <div class="col">
+    <div class="col-12 col-lg-6">
         <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
