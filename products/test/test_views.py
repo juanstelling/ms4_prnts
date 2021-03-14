@@ -63,12 +63,14 @@ class TestProductViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
 
-    """ Product detail testing   """
+    """ Product detail testing  """
 
     def test_product_detail_view(self):
         product = Product.objects.create(name='Test product id')
         response = self.client.get(f'/products/{product.id}')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/product_detail.html')
+
+
 
 
