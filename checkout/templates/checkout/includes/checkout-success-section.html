@@ -11,8 +11,7 @@
             <a href="{% url 'products' %}" class="btn btn-black rounded-0">
                 <span class="uppercase fw-bold">Continue shopping</span>
             </a>
-        {% endif %}
-        {% if from_profile %}
+        {% else %}
             <a href="{% url 'profile' %}" class="btn btn-black rounded-0 float-end">
                 <span class="uppercase fw-bold">Go back to profile</span>
             </a>
@@ -43,7 +42,7 @@
                 <p class="my-0">Town or city:</p>
                 <p class="my-0">Country:</p>
                 <p class="my-0">Phone number::</p>
-                </div>
+            </div>
             <div class="col">
                 <p class="my-0">{{ order.full_name}}</p>
                 <p class="my-0">{{ order.street_address1 }}</p>

@@ -45,5 +45,3 @@ def email_list_signup(request):
                 form.save()
                 messages.info(request, "Your are succesfully subscribed!")
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-
-

@@ -79,30 +79,6 @@ ul {
     height: 90%;
 }
 
-/*------------------------------------- Overig */ 
-
-input#email {
-    border: 0px;
-    border-bottom: 3px solid black;
-}
-
-
-/*------------------------------------- Contact form */
-
-.contact-input {
-    width: 100%;
-    margin: 5px 0px;
-    box-sizing: border-box;
-    padding: 5px 5px;
-    border: 1px solid #cfd7df;
-    border-radius: 0px;
-    background-color: #fff;
-}
-
-.contact-input::placeholder {
-    color: #000;
-}
-
 /*------------------------------------- background colours */ 
 .bg-black {
     background-color: #000 !important;
@@ -126,25 +102,7 @@ input#email {
     color: #000 !important;
 }
 
-/*------------------------------------- Searchbar */ 
-.searchbar {
-    font-size: 15px;
-    border: 0px;
-    border-bottom: 1px solid black;
-
-}
-
-.searchbutton {
-    border: 0px;
-    background-color: #fff;
-}
-
-input[name='q']::placeholder {
-    color: #aab7c4;
-}
-
 /* -------------------------------- Images */
-
 .about-img {
     height: 400px;
     width: 400px;
@@ -164,38 +122,6 @@ input[name='q']::placeholder {
 .bag-img {
     height: 80px;
     width: 120px;
-}
-
-
-/* -------------------------------- caption in images  */
-
-.carousel-caption {
-    position: absolute;
-    min-width: 30%;
-    max-width: 80%;
-    width: fit-content;
-    right: 20%;
-    left: 15%;
-    bottom: 50px;
-    background-color: #fff;
-    opacity: 0.8;
-    color: #000;
-    text-align: left;
-    padding: 10px 30px;
-}
-
-.cta-caption {
-    position: relative;
-    min-width: 30%;
-    max-width: 80%;
-    width: fit-content;
-    left: 10%;
-    top: 50%;
-    background-color: #fff;
-    opacity: 0.8;
-    color: #000;
-    text-align: left;
-    padding: 10px 30px;
 }
 
 /* -------------------------------- Buttons / links  */
@@ -245,6 +171,68 @@ input[name='q']::placeholder {
     border: 0px;
 }
 
+/* -------------------------------- caption in images  */
+.carousel-caption {
+    position: absolute;
+    min-width: 30%;
+    max-width: 80%;
+    width: fit-content;
+    right: 20%;
+    left: 15%;
+    bottom: 50px;
+    background-color: #fff;
+    opacity: 0.8;
+    color: #000;
+    text-align: left;
+    padding: 10px 30px;
+}
+
+.cta-caption {
+    position: relative;
+    min-width: 30%;
+    max-width: 80%;
+    width: fit-content;
+    left: 10%;
+    top: 50%;
+    background-color: #fff;
+    opacity: 0.8;
+    color: #000;
+    text-align: left;
+    padding: 10px 30px;
+}
+
+/*------------------------------------- Contact form */
+.contact-input {
+    width: 100%;
+    margin: 5px 0px;
+    box-sizing: border-box;
+    padding: 5px 5px;
+    border: 1px solid #cfd7df;
+    border-radius: 0px;
+    background-color: #fff;
+}
+
+.contact-input::placeholder {
+    color: #000;
+}
+
+/*------------------------------------- Searchbar */ 
+.searchbar {
+    font-size: 15px;
+    border: 0px;
+    border-bottom: 1px solid black;
+
+}
+
+.searchbutton {
+    border: 0px;
+    background-color: #fff;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
 /* -------------------------------- Toast messages  */
 .toast-container {
     position: fixed;
@@ -257,28 +245,16 @@ input[name='q']::placeholder {
     overflow: visible;
 }
 
-/* -------------------------------- Media Queries */
+/*------------------------------------- Input fields */ 
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+input#email {
+    border: 0px;
+    border-bottom: 3px solid black;
 }
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
-    }
+.input-group-prepend,
+.input-group-append {
+    margin: 10px 0px;
 }
 
 /* -------------------------------- Allauth formatting  */
@@ -349,16 +325,31 @@ input:-internal-autofill-selected {
     background-color: #fff !important;
 }
 
+/* -------------------------------- Media Queries */
 
-/*------------------------------------- Overig  */
-
-.input-group-prepend,
-.input-group-append {
-    margin: 10px 0px;
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
 }
 
-/*------------------------------------- Media queries | for iPhone 5/6/7/8 plus   */
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
 
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* media queryies for iphone 5/6/7/8 plus */
 @media screen and (max-width: 400px) {
     h4 {
        font-size: 20px;
@@ -391,7 +382,7 @@ input:-internal-autofill-selected {
 
 }
 
-/*------------------------------------- Media queries | iPad   */
+/* media queryies for iphone ipad*/
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .products-col {
         padding-right: calc(var(--bs-gutter-x)/ 2) !important;

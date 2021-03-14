@@ -60,7 +60,6 @@ class StripeWH_Handler:
             if value == "":
                 shipping_details.address[field] = None
 
- 
         # Updates info of profile if save_info is true
         profile = None
         username = intent.metadata.username

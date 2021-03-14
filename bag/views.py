@@ -12,7 +12,6 @@ def view_bag(request):
     context = {
         'form': form,
     }
-
     return render(request, 'bag/bag.html', context)
 
 
