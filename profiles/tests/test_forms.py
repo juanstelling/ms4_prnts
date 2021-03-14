@@ -4,7 +4,7 @@ from .forms import UserProfileForm
 
 class TestProfileForm(TestCase):
 
-    def test_contact_form(self):
+    def test_profile_form(self):
         form = UserProfileForm({'user': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('user', form.errors.keys())

@@ -94,6 +94,6 @@ class Test_Profiles_Model(TestCase):
             'default_street_address2').max_length
         self.assertEqual(max_length, 80)
 
-    def test_contact_str_method(self):
+    def test_profile_str_method(self):
         profile = UserProfile.objects.create(name='test profile')
         self.assertEqual(str(profile), 'test profile')
