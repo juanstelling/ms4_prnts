@@ -72,7 +72,7 @@ ul {
 }
 
 .products-col {
-    padding-right: 3rem !important;
+    padding-right: 3rem;
 }
 
 .custom-col {
@@ -257,6 +257,10 @@ input#email {
     margin: 10px 0px;
 }
 
+.form-group {
+    margin: 15px 0px;
+}
+
 /* -------------------------------- Allauth formatting  */
 
 .allauth-form-inner-content p {
@@ -350,7 +354,7 @@ input:-internal-autofill-selected {
 }
 
 /* media queryies for iphone 5/6/7/8 plus */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 414px) {
     h4 {
        font-size: 20px;
     }
@@ -379,6 +383,12 @@ input:-internal-autofill-selected {
     .products-col {
         padding-right: calc(var(--bs-gutter-x)/ 2) !important;
     }
+    .custom-toast {
+        max-width: 80%;
+    }
+    .toast-container {
+        left: 17%;
+    }
 
 }
 
@@ -386,5 +396,9 @@ input:-internal-autofill-selected {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .products-col {
         padding-right: calc(var(--bs-gutter-x)/ 2) !important;
+    }
+    .about-img {
+        height: 300px;
+        width: 300px;
     }
 }
