@@ -1,0 +1,1 @@
+web: gunicorn prnts.wsgi:application

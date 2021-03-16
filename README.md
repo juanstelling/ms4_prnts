@@ -276,6 +276,8 @@ The website is classified by 8 applications: home, about, products, checkout, pr
 #### 14. Contact page 
 - Users can reach out to the company with the **contact form**. The user has to fill in the name, email and message. The form will be sent to the admin. 
 - **Contact details** (phone number, email) are displayed on this page. 
+- There is a separate section with four **unique selling points** (fast delivery, free shipping, sustainability and free delivery.) displays with icons. 
+- There is a **cta section to all products**.
 
 #### 15. Django-Allauth features 
 - Sign up
@@ -438,7 +440,7 @@ Click on **Open app** in the right corner of your Heroku account. The app wil op
 - The content of the return policy is coming from Na-kd
 
 #### Media 
-All images are form [Pexels](https://www.pexels.com).
+- All images are from [Pexels](https://www.pexels.com).
 
 #### Code
 - The code for the project is partly from the video lessions of the Boutique Ado project of [Code Institute](https://codeinstitute.net/). 
