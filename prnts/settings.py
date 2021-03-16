@@ -41,9 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
-    'cloudinary',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -186,12 +184,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dmv5hano3',
-    'API_KEY': '618181939114476',
-    'API_SECRET': os.getenv("CLOUDINARY_API_SECRET")
-}
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 if 'USE_AWS' in os.environ:
     # Bucket config
@@ -201,11 +193,11 @@ if 'USE_AWS' in os.environ:
     AWS_SECRET_ACCES_KEY = os.environ.get('AWS_SECRET_ACCES_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
-    # Static files
+#     # Static files
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
     STATICFILES_LOCATION = 'static'
 
-    # Override static URLS in production
+#     # Override static URLS in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
 
 # Stripe
