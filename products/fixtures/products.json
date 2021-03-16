@@ -10,8 +10,7 @@
             "category": 2,
             "image": "",
             "image_url": "",
-            "in_stock": "True",
-            "in_favorite": "False"
+            "in_stock": "True"
         }
     },
     {
@@ -25,8 +24,7 @@
             "category": 4,
             "image": "",
             "image_url": "",
-            "in_stock": "True",
-            "in_favorite": "False"
+            "in_stock": "True"
         }
     }
 ]
